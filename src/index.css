@@ -967,3 +967,11 @@ h3 {
   letter-spacing: 1.5px;
   color: #888888;
 }
+.navbar {
+  position: sticky;       /* O usa 'fixed' si prefieres que flote completamente */
+  top: 0;                 /* Se fija en el borde superior de la ventana */
+  left: 0;
+  width: 100%;
+  z-index: 1000;          /* Asegura que quede por encima de las imágenes y texto */
+  background-color: #121212; /* Tu color oscuro de fondo para que no sea transparente al bajar */
+}
