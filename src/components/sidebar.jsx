@@ -1,4 +1,5 @@
 import { NavLink, Link } from 'react-router-dom'
+import logoImg from '../img/logo.png'
 
 function Sidebar() {
 
@@ -12,21 +13,22 @@ function Sidebar() {
     <aside className="sidebar">
 
       <div className="sidebar-brand">
-
-        <Link to="/dashboard">
-
-          <h2>
-            EL PATRÓN
-          </h2>
-
-          <span>
-            LUXURY BARBERSHOP
-          </span>
-
+        <Link to="/dashboard" className="sidebar-brand-link">
+          <img 
+            src={logoImg} 
+            alt="El Patrón Logo" 
+            className="sidebar-logo-img" 
+          />
+          <div className="sidebar-brand-text">
+            <h2>
+              EL PATRÓN
+            </h2>
+            <span>
+              LUXURY BARBERSHOP
+            </span>
+          </div>
         </Link>
-
       </div>
-
 
       <nav className="sidebar-nav">
 
@@ -47,7 +49,6 @@ function Sidebar() {
         >
           Citas
         </NavLink>
-
 
         <p className="sidebar-title">
           OPERACIONES
@@ -75,7 +76,6 @@ function Sidebar() {
         </NavLink>
 
       </nav>
-
 
       <div className="sidebar-bottom">
 

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import logoImg from '../img/logo.png' // Importación del logo
 
 function Login() {
 
@@ -37,13 +38,20 @@ function Login() {
           to="/"
           className="login-logo"
         >
-          <h1>
-            EL PATRÓN
-          </h1>
+          <img 
+            src={logoImg} 
+            alt="El Patrón Logo" 
+            className="login-logo-img" 
+          />
+          <div className="login-logo-text">
+            <h1>
+              EL PATRÓN
+            </h1>
 
-          <span>
-            LUXURY BARBERSHOP
-          </span>
+            <span>
+              LUXURY BARBERSHOP
+            </span>
+          </div>
         </Link>
 
         <div className="login-title">

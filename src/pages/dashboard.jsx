@@ -1,6 +1,7 @@
 import Sidebar from '../components/sidebar.jsx'
 import { Link } from 'react-router-dom'
 
+
 function Dashboard() {
 
   const kpis = [
@@ -83,6 +84,7 @@ function Dashboard() {
 
 
         <section className="dashboard-panel">
+          
 
           <div className="panel-header">
 
@@ -193,5 +195,6 @@ function Dashboard() {
     </main>
   )
 }
+
 
 export default Dashboard

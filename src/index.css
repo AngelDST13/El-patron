@@ -871,3 +871,99 @@ h3 {
   }
 
 }
+/* Contenedor del enlace del logo en la barra de navegación */
+.navbar-logo {
+  display: flex !important;
+  flex-direction: row !important; /* Fuerza que queden uno al lado del otro */
+  align-items: center !important;  /* Centra verticalmente el logo con el texto */
+  gap: 12px;                      /* Espacio horizontal entre logo y texto */
+  text-decoration: none;
+}
+
+/* Tamaño y ajuste de la imagen del logo */
+.navbar-logo img,
+.navbar-logo-img {
+  height: 45px;                   /* Ajusta la altura del logo */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Contenedor interno del texto "EL PATRÓN LUXURY BARBERSHOP" */
+.navbar-logo > div,
+.navbar-logo-text {
+  display: flex;
+  flex-direction: column;         /* Mantiene "LUXURY BARBERSHOP" debajo de "EL PATRÓN" */
+  justify-content: center;
+}
+/* Contenedor del enlace de la marca en el Sidebar */
+.sidebar-brand-link {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px;
+  text-decoration: none;
+}
+
+/* Imagen del logo */
+.sidebar-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Agrupación vertical del texto al lado del logo */
+.sidebar-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-brand-text h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #d4af37;
+  line-height: 1;
+}
+
+.sidebar-brand-text span {
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  color: #888888;
+}
+/* Alineación horizontal del enlace en Login */
+.login-logo {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 24px;
+}
+
+/* Tamaño de la imagen del logo en Login */
+.login-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Agrupación vertical de los textos de la marca */
+.login-logo-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.login-logo-text h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #d4af37;
+  line-height: 1;
+}
+
+.login-logo-text span {
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  color: #888888;
+}
