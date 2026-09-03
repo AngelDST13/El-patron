@@ -1,4 +1,3 @@
-import React from 'react'
 
 function KpiCard({ title, value }) {
   return (
