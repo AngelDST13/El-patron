@@ -1,0 +1,12 @@
+import React from 'react'
+
+function KpiCard({ title, value }) {
+  return (
+    <div className="kpi-card">
+      <h3>{title}</h3>
+      <p>{value}</p>
+    </div>
+  )
+}
+
+export default KpiCard
