@@ -12,9 +12,26 @@ function BookingForm() {
   })
 
   const handleChange = (e) => {
+    const { name, value } = e.target
+
+    // 1. Validar campo Nombre: Solo letras y espacios (bloquea números y caracteres especiales)
+    if (name === 'nombre') {
+      const soloLetras = value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')
+      setForm({ ...form, [name]: soloLetras })
+      return
+    }
+
+    // 2. Validar campo WhatsApp: Solo números y guiones (bloquea letras)
+    if (name === 'whatsapp') {
+      const soloNumeros = value.replace(/[^0-9-]/g, '')
+      setForm({ ...form, [name]: soloNumeros })
+      return
+    }
+
+    // Para el resto de inputs (selects, date, time)
     setForm({
       ...form,
-      [e.target.name]: e.target.value
+      [name]: value
     })
   }
 
@@ -81,6 +98,8 @@ Hora: ${form.hora}
             value={form.nombre}
             onChange={handleChange}
             placeholder="Tu nombre"
+            pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+            title="Ingresa únicamente letras"
             required
           />
 
@@ -98,6 +117,10 @@ Hora: ${form.hora}
             value={form.whatsapp}
             onChange={handleChange}
             placeholder="8888-8888"
+            inputMode="numeric"
+            pattern="[0-9\-]+"
+            maxLength={12}
+            title="Ingresa únicamente números"
             required
           />
 
